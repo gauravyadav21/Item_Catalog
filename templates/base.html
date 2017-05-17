@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock%}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+body{
+	background: url("http://eskipaper.com/images/dessert-background-1.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	margin-right: 200px;
+	margin-left: 200px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+nav{
+	background: url("http://wallpaper-gallery.net/images/foods-wallpaper/foods-wallpaper-8.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100px;
+}
+.navbar-brand{
+	font-family: 'Indie Flower', cursive;
+	font-size: 50px;
+	padding-top: 30px;
+
+}
+.navbar-default .navbar-brand {
+    color: #131415;
+}
+.resnames{
+	font-family: 'Pacifico', cursive;
+	padding-left: 38px;
+	padding-right: 38px;
+}
+.res{
+	width: 230px;
+	background: url("https://images7.alphacoders.com/379/379375.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    border: 5px solid black;
+    padding: 25px;
+    margin: 25px;
+	font-size: 30px;
+	height:250px;    
+}
+a{
+	color:#131415;
+}
+.btn{
+	padding: 15px;
+    margin: 25px;
+	border-color: #9FB80A;
+	border-width: 2px;
+	color: #9FB80A;
+	background-color: white;
+}
+.resname{
+	font-family: 'Pacifico', cursive;
+	padding-left: 38px;
+	padding-right: 38px;
+}
+
+	</style>
+	{% block head %}{% endblock%}
+</head>
+<body>
+	{% block content %}
+    {% endblock %}
+</body>
+</html>

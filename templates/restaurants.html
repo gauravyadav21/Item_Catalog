@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Restaurant{% endblock%}
+{% block head %}{% endblock%}
+{% block content %}
+	<div>
+		<nav class="navbar navbar-default">
+		<div class="navbar-header"><a class="navbar-brand aa" href="/restaurants/">Restaurants</a></div>
+		<div class="navbar-nav" ><a class="navbar-brand" href="http://localhost:8000/gdisconnect">Logout</a></div>
+		</nav>
+	<a href="{{url_for('newRestaurant')}}" style="text-align: center"><h2>Create new restaurant</h2></a>
+		{% with message = get_flashed_messages() %}
+			{% if message %}
+				<ul>
+				{%for i in message%}
+					<li style="color: red"><strong>{{i}}</strong></li>
+				{%endfor%}
+				</ul>
+			{%endif%}
+		{%endwith%}
+		<div class="resname">
+			{% for i in restaurants%}
+			<div class="col-md-12">
+				<a href="{{url_for('showMenu',restaurant_id = i.id)}}"><div class="res col-md-6 text-center">
+					{{i.name}}
+				</div></a>
+				<div class= "col-md-6">
+					<a class = "btn" href="{{url_for('editRestaurant', restaurant_id = i.id)}}">Edit</a>
+					<a class = "btn" href="{{url_for('deleteRestaurant', restaurant_id = i.id)}}">Delete</a>
+				</div>
+			</div>
+			{%endfor%}
+		</div>
+	</div>
+{% endblock %}

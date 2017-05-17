@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Edit Restaurant{% endblock%}
+{% block content %}
+<nav class="navbar navbar-default">
+		<div class="navbar-header"><a class="navbar-brand aa" href="/restaurants/">Restaurants</a></div>
+		<div class="navbar-nav" ><a class="navbar-brand" href="http://localhost:8000/gdisconnect">Logout</a></div>
+		</nav>
+<form method = 'post' action="{{url_for('editRestaurant', restaurant_id = restaurant_id )}}">
+	<input class="form-control" type="text" name="name" value={{item.name}}>
+	<input class="btn" type="submit" value="Edit">
+	<a class="btn" href="{{url_for('showRestaurants')}}">Cancel</a>
+</form>
+<div style="color: red"><b>{{msg}}<b></div>
+{% endblock %}

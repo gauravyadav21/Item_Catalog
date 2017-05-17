@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Rename Menu Item{% endblock%}
+{% block content %}
+<nav class="navbar navbar-default">
+		<div class="navbar-header"><a class="navbar-brand aa" href="/restaurants/">Restaurants</a></div>
+		<div class="navbar-nav" ><a class="navbar-brand" href="http://localhost:8000/gdisconnect">Logout</a></div>
+		</nav>
+<h2>Edit Menu List</h2><br>
+<form action = "{{url_for('editMenuItem', restaurant_id = restaurant_id, menu_id = menu_id) }}" method='post'>
+	Name<input  type="text" class="form-control" name="name" value="{{item.name}}"><br>
+	Course:<input type="text" class="form-control" name="course" value="{{item.course}}"><br>
+	Price:<input type="text" class="form-control" name="price" value="{{item.price}}"><br>
+	Desciption:<input type="text" class="form-control" name="des" value="{{item.description}}"><br>
+	<input class="btn" type="submit" name="Submit">
+	<a class="btn" href="{{url_for('showMenu', restaurant_id = restaurant_id )}}">Cancel</a>
+</form>
+<div style="color: red"><b>{{msg}}<b></div>
+{% endblock %}

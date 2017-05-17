@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Restaurant{% endblock%}
+{% block content %}
+	<nav class="navbar navbar-default">
+		<div class="navbar-header"><a class="navbar-brand aa" href="/restaurants/">Restaurants</a></div>
+		<div class="navbar-nav" ><a class="navbar-brand" href="/login">Login</a></div>
+	</nav>
+	<h2>{{restaurant.name}}</h2>
+
+	{%for i in items%}
+		<h3>Item: {{i.name}}</h3>
+		<h4>Price: {{i.price}}</h4>
+		<h4>Course: {{i.course}}</h4>
+		<h4>Description: {{i.description}}</h4>
+		<hr>
+	{%endfor%}
+{% endblock %}
