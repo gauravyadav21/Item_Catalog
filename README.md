@@ -13,7 +13,7 @@
   <li><h3>Fetch the Source Code and VM Configuration</h3></li>
   <ul type="disc">
    <li>Clone the Item Catalog repository to your local machine:<li>
-   <pre>git clone https://github.com/visheshbanga/Item-Catalog</pre>
+   <pre>git clone https://github.com/gauravyadav21/Item_Catalog</pre>
    <p><b>Windows:</b> Use the Git Bash program (installed with Git) to get a Unix-style terminal.<br>
    <b>Other systems:</b> Use your favorite terminal program.</p>
   </ul>
